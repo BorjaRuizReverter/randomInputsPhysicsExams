@@ -1,2 +1,2 @@
 # randomInputsPhysicsExams
-An exam's database repository that uses Latex with R chunks 
+A database of Physics exercises for generating Physics exams made with Sweave (R + LaTeX)
