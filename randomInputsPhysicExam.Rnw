@@ -1,0 +1,218 @@
+\documentclass[11pt,a4paper]{article}
+%\documentclass[20pt,a4paper]{extarticle}  %Para aumentar o tamanho da fonte
+
+\usepackage[latin1]{inputenc}   % Descomentar para compilar no windows
+%\usepackage[latin1]{ltxbase}%This is the inputenc for MikTex
+%\usepackage[latin1]{latex-uni8}%This is the inputenc for MikTex
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx}
+\graphicspath{{./assets/}}%Setting the graphicspath
+\usepackage{color}
+\usepackage{xspace}
+%\usepackage[brazil]{babel}
+\usepackage[portuguese]{babel}
+\usepackage{amsfonts,amssymb,amsmath}
+%\usepackage{amsfonts,amsbsy,amsmath}%This is the amssymb for MikTex
+\usepackage{array,booktabs}
+%\usepackage{latex-tools,booktabs}
+\usepackage{proof}
+\usepackage{fancyhdr}
+\usepackage{paralist}
+\usepackage{hyperref}
+\usepackage{marginnote}
+%\usepackage[pdftex=true,pagebackref=true,bookmarks=true,bookmarksnumbered=true,pdffitwindow=true]{hyperref}
+%\usepackage[top=Bcm, bottom=Hcm, outer=Ccm, inner=Acm, heightrounded, marginparwidth=Ecm,marginparsep=Dcm]{geometry}
+
+%\usepackage{comment}
+\usepackage{aeb-comment}%Use this one instead of comment package
+
+%\usepackage[allowrandomize, solutionsafter, nohiddensolutions, proofing]{eqexam}
+
+%\usepackage[allowrandomize, nosolutions]{eqexam}
+
+\usepackage[allowrandomize, nohiddensolutions]{eqexam}
+
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{answers}
+\usepackage{xparse}
+%%%\usepackage{l3packages}%Containes xparse
+\usepackage{tikz}
+%\usepackage{pgf}%Instead of tikz
+
+\usepackage{ifthen}
+%\usepackage{siunitx}
+%\usepackage{pstricks}
+
+%\usepackage{pdftricks}
+%\begin{psinputs}
+%   \usepackage{pstricks}
+%   \usepackage{multido}
+%\end{psinputs}
+%\usepackage[off]{auto-pst-pdf}
+%\usepackage{pstricks-add}
+
+\renewcommand{\b}{\textbf}
+\newcommand{\noi}{\noindent}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\setlength{\textwidth}{170mm}%
+\setlength{\textheight}{279mm}%
+\setlength{\topmargin}{-30mm}%
+%\setlength{\bottommargin}{ \,}%
+\setlength{\oddsidemargin}{-10mm}
+\setlength{\evensidemargin}{-30mm}%
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\frenchspacing
+\begin{center}
+  \begin{minipage}{1.7cm}
+		\begin{center}
+			\includegraphics[width=3cm, height=3cm]{logo_dqf.jpg}
+		\end{center}
+  \end{minipage}
+	\begin{minipage}{11.4cm}
+		\begin{center}
+				{\small \textsc{Universidade Federal da Paraiba}			\\
+						  \textsc{Centro de Ciencias Agrarias}\\
+						  \textsc{Departamento de Quimica e Fisica} \\
+                         \textsc{Subject:} \textbf{General Physics} \hspace{.65cm}\\
+                          \textsc{Professor: ...}\\
+                }
+		\end{center}
+	\end{minipage}
+	\begin{minipage}{1.6cm}
+		\begin{center}
+			\includegraphics[width=3cm, height=3cm]{logo.jpg} 
+		\end{center}
+	\end{minipage}
+\end{center}
+
+
+{\sf
+  \begin{center}
+    \Large \textbf{--- Unit 1 ---}%
+  \end{center}
+}
+%\bigskip
+
+\setlength{\marginparwidth}{5cm}
+\small \noindent \textbf{Name:}\hspace{0.3cm}\hrulefill \hrulefill
+\hrulefill \hspace{0.1cm}
+\textbf{ID:}\hspace{0.1cm}\rule{1cm}{.1mm}\\*[0.1cm]
+
+
+%\thispagestyle{empty}\bigskip
+
+%\noindent - {\bf Every question worths 2.5 points.}
+%\noindent - {\bf Each right answer adds 2 points, but each one wrong removes 1 point.}
+%\noindent - {\bf Some questions have two right answers, worthing 1 point each.}
+%\noindent - {\bf If the answer is a quotient or a square root, please simplify it because it may match some of the given answers.\\}
+
+%\begin{table*}[ht]
+%  \centering
+%  \scalebox{0.8}{
+%  \begin{tabular}    {p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+%    \hline
+%     & 25\textdegree & 36\textdegree & 46\textdegree & 53\textdegree & 62\textdegree & 66\textdegree & 72\textdegree & 78\textdegree & 84\textdegree\\
+%    \hline
+%    cos & 0.9 & 0.8 & 0.7 & 0.6 & 0.5 & 0.4 & 0.3 & 0.2 & 0.1\\
+%    sin & 0.4 & 0.6 & 0.7 & 0.8 & 0.9 & 0.9 & 1 & 1 & 1\\
+%    tan & 0.5 & 0.7 & 1 & 1 & 2 & 2 & 3 & 5 & 8\\
+%    \hline
+%  \end{tabular}
+%    }
+%\end{table*}
+
+
+\begin{table*}[ht]
+  \centering
+  \scalebox{0.8}{
+    \begin{tabular}    
+      {p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+      \hline
+       & 30\textdegree & 45\textdegree & 60\textdegree\\
+      \hline
+      sin & $\sqrt{1}/2$ & $\sqrt{2}/2$ & $\sqrt{3}/2$\\
+      cos & $\sqrt{3}/2$ & $\sqrt{2}/2$ & $\sqrt{1}/2$\\
+      tan & $1/\sqrt{3}$ & 1 & $\sqrt{3}$\\
+      \hline
+    \end{tabular}
+  }
+\end{table*}
+
+\begin{exam}[Unit1]{Part1}
+%PROBLEMA1: FATORES DE CONVES�O
+%\SweaveInput{../../1. Fatores Convers�o/P1_avogadro_litros.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P2_galoes.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P3_vazao.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P4_mina.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P5_cora�ao.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P6_pressao_atmosferica.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P7_nos.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P8_densidade_agua.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P9_diamante.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P10_consumo_carro.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P11_consumo_laptop.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P12_consumo_casa_celular.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P13_paneis_solares.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P14_mm_chuva_fac.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P15_avogadro_atomos.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P16_aorta_e_chuveiro.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P17_pratos.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P18_cigarros.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P19_boeing.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P20_densidades.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P21_chuva.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P22_bbl.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P23_massamorta.txt}
+%\SweaveInput{../../1. Fatores Convers�o/P24_tabelafipe.txt}
+
+%PROBLEMA2: CINEM�TICA - EQUA��ES
+%\SweaveInput{../../2.1 Cinem�tica - Equa��es/P1_vel_anterior_plano_inclinado.txt}
+%\SweaveInput{../../2.1 Cinem�tica - Equa��es/P2_fun��o_horaria_x_zero.txt}
+%\SweaveInput{../../2.1 Cinem�tica - Equa��es/P3_acel_rampa.txt}
+%\SweaveInput{../../2.1 Cinem�tica - Equa��es/P4_fun��o_horaria_v_zero.txt}
+%\SweaveInput{../../2.1 Cinem�tica - Equa��es/P5_vel_final_ovo_jogado.txt}
+%\SweaveInput{../../2.1 Cinem�tica - Equa��es/P6_vel_final_corpo_abandonado.txt}
+
+%PROBLEMA3: CINEM�TICA - GRAFICOS
+%\SweaveInput{../../2.2 Cinem�tica - Graficos/P1_grafico_v_frente_t.txt}
+%\SweaveInput{../../2.2 Cinem�tica - Graficos/P2_grafico_x_frente_t.txt}
+%\SweaveInput{../../2.2 Cinem�tica - Graficos/P3_equa��o_do_grafico.txt}
+%\SweaveInput{../../2.2 Cinem�tica - Graficos/P4_grafico_apos_derivar.txt}
+
+%PROBLEMA4: VETORES - TRIGONOMETRIA
+%\SweaveInput{../../3.1 Vetores - Trigonometria/P1_altura_aviao.txt}
+%\SweaveInput{../../3.1 Vetores - Trigonometria/P1_altura_aviao2_NA.txt}
+%\SweaveInput{../../3.1 Vetores - Trigonometria/P2_hipotenusa_rio.txt}
+%\SweaveInput{../../3.1 Vetores - Trigonometria/P3_caix�o_horizontal.txt}
+%\SweaveInput{../../3.1 Vetores - Trigonometria/P4_sombra_tangente.txt}
+\SweaveInput{topics/3.1Vectors-Trigonometry/P1_TwoTowers.txt}
+
+
+%PROBLEMA5: VETORES - VETORES
+%\SweaveInput{../../3.2 Vetores - Vetores/P1_modulo_for_resultante.txt}
+%\SweaveInput{../../3.2 Vetores - Vetores/P2_vetores_diagonais.txt}
+%\SweaveInput{../../3.2 Vetores - Vetores/P3_dois_desloc.txt}
+%\SweaveInput{../../3.2 Vetores - Vetores/P3_dois_desloc_modulos_diferentes.txt}
+%\SweaveInput{../../3.2 Vetores - Vetores/P4_tres_desloc_modulos_diferentes.txt}
+
+
+%\noindent {\bf Equa��es:\\ }
+%$x=x_0+v_0\cdot t+\frac{1}{2}a\cdot t^2$\\
+%$v=v_0+a\cdot t$\\
+%$v^2-v^2_0=2\cdot a(x-x_0)$\\
+
+\begin{table*}[ht]
+  \begin{tabular}    {p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+     \bf Equations: &  \\
+     $x=x_0+v_0\cdot t+\frac{1}{2}a\cdot t^2$ & $v=v_0+a\cdot t$ & $v^2-v^2_0=2\cdot a(x-x_0)$\\
+  \end{tabular}
+\end{table*}
+
+\end{exam}
+
+\end{document}
