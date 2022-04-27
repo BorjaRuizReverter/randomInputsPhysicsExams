@@ -1,0 +1,34 @@
+\begin{problem}[h]
+<<echo=FALSE>>=
+time = round(runif(1,2,9))
+distance = 10*round(runif(1,1,5))
+library(MASS)
+result_num = 2*distance
+result_den = time^2
+result = fractions(2*distance/(time^2))
+result_fake1 = 0
+result_fake2 = fractions(result/2)
+result_fake3 = fractions(1/result)
+result_fake4 = fractions(time/(2*distance))
+result_fake5 = fractions(time/distance)
+@
+{\bf Kinematics - Equations.} A body at rest starts falling over a ramp with no friction with the ground. If after \Sexpr{(time)} seconds, the body have already moved \Sexpr{(distance)} m, what would be the module of its aceleration?
+\begin{answers}{3}
+    \bChoices[random]
+    \Ans1 \label{resp2.1} \Sexpr{(result)}$\frac{m}{s^2}$\eAns  
+    \Ans0 \Sexpr{(result_fake2)}$\frac{m}{s^2}$\eAns  
+    \Ans0 \Sexpr{(result_fake3)}$\frac{m}{s^2}$\eAns
+    \Ans0 \Sexpr{(result_fake4)}$\frac{m}{s^2}$\eAns 
+    \Ans0 \Sexpr{(result_fake5)}$\frac{m}{s^2}$\eAns
+    \eFreeze
+    \Ans0 None of them\eAns
+    \eChoices 
+\end{answers}
+\begin{solution}
+Using the equation of a straight line movement,\\
+$s=v_0\cdot t+\frac{1}{2}a\cdot t^2$\\
+, using $v_0=0$ and isolating the aceleration:\\
+$a=\frac{2s}{t^2}=\frac{2*\Sexpr{distance}m}{(\Sexpr{(time)}s)^2}=\frac{\Sexpr{(result_num)}m}{\Sexpr{(result_den)}s^2}=\Sexpr{(result)}\frac{m}{s^2}$
+Thefore, the right answer is the letter \textbf{(\REF*{resp2.1})}.
+\end{solution}
+\end{problem}

@@ -1,0 +1,15 @@
+\begin{problem}[h]
+<<echo=FALSE>>=
+liters = sample(c(2,4,5,6,10,12,14,16,18,20),1)
+num_avogadro = 6#molec/mol
+liters_mol = 22#liters/mol
+library(MASS)
+result = fractions(num_avogadro*liters_mol/liters)
+@
+{\bf Conversion Factors.} Regarding the molecule theory of Avogadro, 1 mol of any substance contains $6\cdot 10^{23}$ molecules. Knowing that, under standar conditions of pressure and temperature, 1 mol of any gas ocuppies 22 liters of volume, how many molecules would be in \Sexpr{(liters)} liters of that gas? Use the unit conversion factors to reach the solution.
+\begin{solution}
+Using the unit conversion factors, the answer should be\\
+$\frac{\Sexpr{(num_avogadro)}\cdot 10^{23}molecules}{1mol}\frac{1mol}{\Sexpr{(liters_mol)}l}\cdot \Sexpr{(liters)}l=\frac{\Sexpr{(num_avogadro)}\cdot\Sexpr{(liters)}}{\Sexpr{(liters_mol)}}\cdot 10^{23}molecules=\Sexpr{(result)}\cdot 10^{23}molecules$
+\end{solution}
+\vspace{1.5cm}%The answer should be written in this space
+\end{problem}
