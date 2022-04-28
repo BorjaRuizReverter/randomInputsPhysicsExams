@@ -130,15 +130,15 @@
 
 \begin{exam}[Unit1]{Part1}
 %PROBLEM1: UNIT CONVERSION FACTORS
-\SweaveInput{topics/1.ConversionFactors/P1_avogadro.txt}
+\SweaveInput{topics/1.ConversionFactors/P1_avogadro.tex}
 
 %PROBLEM2: KINEMATICS - EQUATIONS
-\SweaveInput{topics/2.1.Kinematics-Equations/P1_acel_ramp.txt}
+\SweaveInput{topics/2.1.Kinematics-Equations/P1_acel_ramp.tex}
 
 %PROBLEM3: KINEMATICS - GRAPHICS
 
 %PROBLEM4: VECTORS - TRIGONOMETRY
-\SweaveInput{topics/3.1.Vectors-Trigonometry/P1_TwoTowers.txt}
+\SweaveInput{topics/3.1.Vectors-Trigonometry/P1_TwoTowers.tex}
 
 %PROBLEMA5: VECTORS - VECTORS
 
