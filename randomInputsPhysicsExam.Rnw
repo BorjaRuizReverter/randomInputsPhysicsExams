@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx}
+\graphicspath{{./assets/}}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage[portuguese]{babel}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{array,booktabs}
+\usepackage{proof}
+\usepackage{fancyhdr}
+\usepackage{paralist}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{aeb-comment}
+
+%\usepackage[allowrandomize, solutionsafter, nohiddensolutions, proofing]{eqexam}%Uncomment this to generate a pdf with the right answers ticked and the solution explained right after. This is the pdf that may be given to the students for they check their answers.
+%\usepackage[allowrandomize, nosolutions]{eqexam}%Uncomment this to generate a pdf without the solutions
+\usepackage[allowrandomize, nohiddensolutions]{eqexam}%Uncomment this to generate a pdf with the explained solutions on different pages. This is the recommended pdf for the teacher. 
+
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{answers}
+\usepackage{xparse}
+\usepackage{tikz}
+\usepackage{ifthen}
+%\usepackage{siunitx}
+%\usepackage{pstricks}
+
+%\usepackage{pdftricks}
+%\begin{psinputs}
+%   \usepackage{pstricks}
+%   \usepackage{multido}
+%\end{psinputs}
+%\usepackage[off]{auto-pst-pdf}
+%\usepackage{pstricks-add}
+
+\renewcommand{\b}{\textbf}
+\newcommand{\noi}{\noindent}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\setlength{\textwidth}{170mm}%
+\setlength{\textheight}{279mm}%
+\setlength{\topmargin}{-30mm}%
+%\setlength{\bottommargin}{ \,}%
+\setlength{\oddsidemargin}{-10mm}
+\setlength{\evensidemargin}{-30mm}%
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\frenchspacing
+\begin{center}
+  \begin{minipage}{1.7cm}
+		\begin{center}
+			\includegraphics[width=3cm, height=3cm]{logo_dqf.jpg}
+		\end{center}
+  \end{minipage}
+	\begin{minipage}{11.4cm}
+		\begin{center}
+				{\small \textsc{Universidade Federal da Paraiba}			\\
+						  \textsc{Centro de Ciencias Agrarias}\\
+						  \textsc{Departamento de Quimica e Fisica} \\
+                         \textsc{Subject:} \textbf{General Physics} \hspace{.65cm}\\
+                          \textsc{Professor: ...}\\
+                }
+		\end{center}
+	\end{minipage}
+	\begin{minipage}{1.6cm}
+		\begin{center}
+			\includegraphics[width=3cm, height=3cm]{logo.jpg} 
+		\end{center}
+	\end{minipage}
+\end{center}
+
+
+{\sf
+  \begin{center}
+    \Large \textbf{--- Unit 1 ---}%
+  \end{center}
+}
+%\bigskip
+
+\setlength{\marginparwidth}{5cm}
+\small \noindent \textbf{Name:}\hspace{0.3cm}\hrulefill \hrulefill
+\hrulefill \hspace{0.1cm}
+\textbf{ID:}\hspace{0.1cm}\rule{1cm}{.1mm}\\*[0.1cm]
+
+
+%\thispagestyle{empty}\bigskip
+
+%\noindent - {\bf Every question worths 2.5 points.}
+%\noindent - {\bf Each right answer adds 2 points, but each one wrong removes 1 point.}
+%\noindent - {\bf Some questions have two right answers, worthing 1 point each.}
+%\noindent - {\bf If the answer is a quotient or a square root, please simplify it because it may match some of the given answers.\\}
+
+%\begin{table*}[ht]
+%  \centering
+%  \scalebox{0.8}{
+%  \begin{tabular}    {p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+%    \hline
+%     & 25\textdegree & 36\textdegree & 46\textdegree & 53\textdegree & 62\textdegree & 66\textdegree & 72\textdegree & 78\textdegree & 84\textdegree\\
+%    \hline
+%    cos & 0.9 & 0.8 & 0.7 & 0.6 & 0.5 & 0.4 & 0.3 & 0.2 & 0.1\\
+%    sin & 0.4 & 0.6 & 0.7 & 0.8 & 0.9 & 0.9 & 1 & 1 & 1\\
+%    tan & 0.5 & 0.7 & 1 & 1 & 2 & 2 & 3 & 5 & 8\\
+%    \hline
+%  \end{tabular}
+%    }
+%\end{table*}
+
+
+\begin{table*}[ht]
+  \centering
+  \scalebox{0.8}{
+    \begin{tabular}    
+      {p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}p{0.05\linewidth}}
+      \hline
+       & 30\textdegree & 45\textdegree & 60\textdegree\\
+      \hline
+      sin & $\sqrt{1}/2$ & $\sqrt{2}/2$ & $\sqrt{3}/2$\\
+      cos & $\sqrt{3}/2$ & $\sqrt{2}/2$ & $\sqrt{1}/2$\\
+      tan & $1/\sqrt{3}$ & 1 & $\sqrt{3}$\\
+      \hline
+    \end{tabular}
+  }
+\end{table*}
+
+\begin{exam}[Unit1]{Part1}
+%PROBLEM1: UNIT CONVERSION FACTORS
+\SweaveInput{topics/1.ConversionFactors/P1_avogadro.tex}
+
+%PROBLEM2: KINEMATICS - EQUATIONS
+\SweaveInput{topics/2.1.Kinematics-Equations/P1_acel_ramp.tex}
+
+%PROBLEM3: KINEMATICS - GRAPHICS
+
+%PROBLEM4: VECTORS - TRIGONOMETRY
+\SweaveInput{topics/3.1.Vectors-Trigonometry/P1_TwoTowers.tex}
+
+%PROBLEMA5: VECTORS - VECTORS
+
+%\noindent {\bf Equations:\\ }
+%$x=x_0+v_0\cdot t+\frac{1}{2}a\cdot t^2$\\
+%$v=v_0+a\cdot t$\\
+%$v^2-v^2_0=2\cdot a(x-x_0)$\\
+
+\begin{table*}[ht]
+  \begin{tabular}    {p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+     \bf Equations: &  \\
+     $x=x_0+v_0\cdot t+\frac{1}{2}a\cdot t^2$ & $v=v_0+a\cdot t$ & $v^2-v^2_0=2\cdot a(x-x_0)$\\
+  \end{tabular}
+\end{table*}
+
+\end{exam}
+
+\end{document}
