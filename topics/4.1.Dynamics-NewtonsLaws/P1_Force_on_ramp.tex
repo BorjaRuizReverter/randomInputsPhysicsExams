@@ -1,0 +1,38 @@
+\begin{problem}[h]
+<<echo=FALSE>>=
+weight = 10*round(runif(1,1,10))
+ang_grad = 15*round(runif(1,2,4))
+if(ang_grad==30){
+  denominator_cos_ang=1 
+  denominator_sen_ang=3}
+if(ang_grad==45){
+  denominator_cos_ang=2
+  denominator_sen_ang=2}
+if(ang_grad==60){
+  denominator_cos_ang=3
+  denominator_sen_ang=1}
+
+result = weight/2
+result_fake1 = weight
+result_fake2 = weight*2
+@
+{\bf Newton's Laws.} A block that weights $\Sexpr{(weight)}$N is being pushed over a ramp inclined $\Sexpr{(ang_grad)}$\textdegree due to a force $F$, which is parallel to the ramp. The movement is straight and uniform and without friction. What is the module of that force $F$?
+\begin{answers}{3}
+    \bChoices[random] 
+    \Ans1\label{resp4.1}\Sexpr{(result)}$\sqrt{\Sexpr{(denominator_sen_ang)}}$N\eAns
+    \Ans0 \Sexpr{(result_fake1)}N\eAns
+    \Ans0 \Sexpr{(result_fake2)}$\sqrt{\Sexpr{(denominator_sen_ang)}}$N\eAns
+    \Ans0 \Sexpr{(result)}N\eAns
+    \Ans0 \Sexpr{(result_fake1)}$\sqrt{\Sexpr{(denominator_sen_ang)}}$N\eAns
+    \eFreeze
+    \Ans0 None of them\eAns
+    \eChoices
+\end{answers}
+\begin{solution}
+Choosing a reference with the horizontal axe $x$ parallel to the ramp and using First Newton's Laws on the horizontal:\\
+$\Sigma F{x} = 0$.\\
+Therefore,\\
+$F = P_x = P \sin \theta = \Sexpr{(weight)}N\sin \Sexpr{(ang_grad)}^{\circ} = \Sexpr{(weight/2)}\sqrt{\Sexpr{(denominator_sen_ang)}}N$.\\
+Which means that the right answer is the letter \textbf{(\REF*{resp4.1})}.
+\end{solution}
+\end{problem}
