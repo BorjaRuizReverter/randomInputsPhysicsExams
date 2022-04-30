@@ -143,6 +143,9 @@
 %PROBLEM5: DYNAMICS - NEWTON'S LAWS
 \SweaveInput{topics/4.1.Dynamics-NewtonsLaws/P1_Force_on_ramp.tex}
 
+%PROBLEM6: DYNAMICS - NEWTON'S LAWS WITH FRICTION
+\SweaveInput{topics/4.2Dynamics-NewtonsLawsWithFriction/P1_friction_on_horizontal_plane.tex}
+
 %\noindent {\bf Equations:\\ }
 %$x=x_0+v_0\cdot t+\frac{1}{2}a\cdot t^2$\\
 %$v=v_0+a\cdot t$\\

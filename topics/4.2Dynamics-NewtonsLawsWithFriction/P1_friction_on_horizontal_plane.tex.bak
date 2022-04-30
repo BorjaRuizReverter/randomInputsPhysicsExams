@@ -1,0 +1,33 @@
+\begin{problem}[h]
+<<echo=FALSE>>=
+mass = round(runif(1,1,5))
+f = 10*round(runif(1,1,10))
+kinetic_friction_coef = 0.1*round(runif(1,1,4))
+a = round((f-kinetic_friction_coef*mass*10)/mass,1)
+
+result = a
+result_fake1 = mass
+result_fake2 = f*kinetic_friction_coef
+result_fake3 = kinetic_friction_coef
+result_fake4 = mass*f
+@
+{\bf Newton's Laws with friction.} A block of $\Sexpr{(mass)}$ kg is moving on a horizontal surface due to a force $F$ of $\Sexpr{(f)}$ N parallel to that surface. If the kinetic friction coeficient between the block and the surface is $\Sexpr{(kinetic_friction_coef)}$, the aceleration of the block should be...
+\begin{answers}{3}
+    \bChoices[random]
+    \Ans1\label{resp4.2} \Sexpr{(result)}$m/s^2$\eAns
+    \Ans0 \Sexpr{(result_fake1)}$m/s^2$\eAns 
+    \Ans0 \Sexpr{(result_fake2)}$m/s^2$\eAns
+    \Ans0 \Sexpr{(result_fake3)}$m/s^2$\eAns
+    \Ans0 \Sexpr{(result_fake4)}$m/s^2$\eAns
+    \eFreeze
+    \Ans0 None of them\eAns
+    \eChoices 
+\end{answers}
+\begin{solution}
+Using Second's Newton Law on the vertical axis,\\
+$N = F_g = mg$\\
+Then, using First's Newton Law on the horizontal axis and isolating the aceleration,\\
+$a_x = \frac{\Sigma F_x}{m} = \frac{F-f_k}{m} = \frac{F-\mu\cdot N}{m} =\frac{F-\mu\cdot m \cdot g}{m} = \frac{\Sexpr{(f)}N-\Sexpr{(kinetic_friction_coef)}\cdot\Sexpr{(mass)}kg\cdot 10m/s^2}{\Sexpr{(mass)}kg} = \Sexpr{(a)}m/s^2$.\\
+Therefore, the right answer is letter \textbf{(\REF*{resp4.2})}.
+\end{solution}
+\end{problem}
