@@ -129,8 +129,11 @@
 \end{table*}
 
 \begin{exam}[Unit1]{Part1}
+%Comment or uncomment each SweaveInput of the database of Physics problems according to your preferences
+
 %PROBLEM1: UNIT CONVERSION FACTORS
-\SweaveInput{topics/1.ConversionFactors/P1_avogadro.tex}
+%\SweaveInput{topics/1.ConversionFactors/P1_avogadro.tex}
+\SweaveInput{topics/1.ConversionFactors/P2_cubic_centimeters.tex}
 
 %PROBLEM2: KINEMATICS - EQUATIONS
 \SweaveInput{topics/2.1.Kinematics-Equations/P1_acel_ramp.tex}
