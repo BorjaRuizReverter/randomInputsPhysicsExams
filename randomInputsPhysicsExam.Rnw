@@ -1,12 +1,9 @@
 \documentclass[11pt,a4paper]{article}
 
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} 
-\usepackage{graphicx}
-\graphicspath{{./assets/}}
 \usepackage{color}
 \usepackage{xspace}
-\usepackage[portuguese]{babel}
 \usepackage{amsfonts,amssymb,amsmath}
 \usepackage{array,booktabs}
 \usepackage{proof}
@@ -15,39 +12,28 @@
 \usepackage{hyperref}
 \usepackage{marginnote}
 \usepackage{aeb-comment}
-
-%\usepackage[allowrandomize, solutionsafter, nohiddensolutions, proofing]{eqexam}%Uncomment this to generate a pdf with the right answers ticked and the solution explained right after. This is the pdf that may be given to the students for they check their answers.
-%\usepackage[allowrandomize, nosolutions]{eqexam}%Uncomment this to generate a pdf without the solutions
-\usepackage[allowrandomize, nohiddensolutions]{eqexam}%Uncomment this to generate a pdf with the explained solutions on different pages. This is the recommended pdf for the teacher. 
-
+\usepackage{graphicx}
+\graphicspath{{./assets/}}
+%\usepackage[allowrandomize, solutionsafter, nohiddensolutions, proofing]{eqexam}%UNCOMMENT THIS TO GENERATE A PDF WITH THE RIGHT ANSWERS TICKED AND THE SOLUTION EXPLAINED RIGHT AFTER. THIS IS THE PDF THAT MAY BE GIVEN TO THE STUDENTS FOR THEY CHECK THEIR ANSWERS.
+%\usepackage[allowrandomize, nosolutions]{eqexam}%UNCOMMENT THIS TO GENERATE A PDF WITHOUT THE SOLUTIONS
+\usepackage[allowrandomize, nohiddensolutions]{eqexam}%UNCOMMENT THIS TO GENERATE A PDF WITH THE EXPLAINED SOLUTIONS ON DIFFERENT PAGES. THIS IS THE RECOMMENDED PDF FOR THE TEACHER. 
 \usepackage{wrapfig}
 \usepackage{float}
 \usepackage{answers}
 \usepackage{xparse}
 \usepackage{tikz}
 \usepackage{ifthen}
-%\usepackage{siunitx}
-%\usepackage{pstricks}
-
-%\usepackage{pdftricks}
-%\begin{psinputs}
-%   \usepackage{pstricks}
-%   \usepackage{multido}
-%\end{psinputs}
-%\usepackage[off]{auto-pst-pdf}
-%\usepackage{pstricks-add}
 
 \renewcommand{\b}{\textbf}
 \newcommand{\noi}{\noindent}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 
-\setlength{\textwidth}{170mm}%
-\setlength{\textheight}{279mm}%
-\setlength{\topmargin}{-30mm}%
-%\setlength{\bottommargin}{ \,}%
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{279mm}
+\setlength{\topmargin}{-30mm}
 \setlength{\oddsidemargin}{-10mm}
-\setlength{\evensidemargin}{-30mm}%
+\setlength{\evensidemargin}{-30mm}
 
 \begin{document}
 \SweaveOpts{concordance=TRUE}
@@ -78,24 +64,22 @@
 
 {\sf
   \begin{center}
-    \Large \textbf{--- Unit 1 ---}%
+    \Large \textbf{--- Unit 1 ---}
   \end{center}
 }
-%\bigskip
 
 \setlength{\marginparwidth}{5cm}
 \small \noindent \textbf{Name:}\hspace{0.3cm}\hrulefill \hrulefill
 \hrulefill \hspace{0.1cm}
 \textbf{ID:}\hspace{0.1cm}\rule{1cm}{.1mm}\\*[0.1cm]
 
-
-%\thispagestyle{empty}\bigskip
-
+%THESE ARE SOME WARNINGS THAT MAY BE ENABLE AS DESIRABLE
 %\noindent - {\bf Every question worths 2.5 points.}
 %\noindent - {\bf Each right answer adds 2 points, but each one wrong removes 1 point.}
 %\noindent - {\bf Some questions have two right answers, worthing 1 point each.}
 %\noindent - {\bf If the answer is a quotient or a square root, please simplify it because it may match some of the given answers.\\}
 
+%THIS IS A TABLE WITH THE VALUE OF TRIGRONOMETRIC FUNCTIONS. YOU MAY CHOOSE THIS ONE OR THE FOLLOWING ONE
 %\begin{table*}[ht]
 %  \centering
 %  \scalebox{0.8}{
@@ -129,7 +113,7 @@
 \end{table*}
 
 \begin{exam}[Unit1]{Part1}
-%Comment or uncomment each SweaveInput of the database of Physics problems according to your preferences
+%COMMENT OR UNCOMMENT EACH SWEAVEINPUT OF THE DATABASE OF PHYSICS PROBLEMS ACCORDING TO YOUR PREFERENCES
 
 %PROBLEM1: UNIT CONVERSION FACTORS
 %\SweaveInput{topics/1.ConversionFactors/P1_avogadro.tex}
@@ -149,6 +133,7 @@
 %PROBLEM6: DYNAMICS - NEWTON'S LAWS WITH FRICTION
 \SweaveInput{topics/4.2Dynamics-NewtonsLawsWithFriction/P1_friction_on_horizontal_plane.tex}
 
+%THESE ARE THE EQUATIONS THE STUDENT MAY NEED. CHOOSE IF YOU WANT THEM TO SHOW AS A COLUMN OR AS A ROW
 %\noindent {\bf Equations:\\ }
 %$x=x_0+v_0\cdot t+\frac{1}{2}a\cdot t^2$\\
 %$v=v_0+a\cdot t$\\
