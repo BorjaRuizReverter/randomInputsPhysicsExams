@@ -1,5 +1,5 @@
 # randomInputsPhysicsExams
-This is a database of Physics exercises for generating exams. For that, we use Sweave (R + LaTeX).
+This is a database of Physics exercises for randomly generating exams. For that, we use Sweave (R + LaTeX).
 
 # Cloning 
 You can clone this repository by open a terminal an typing
@@ -14,10 +14,10 @@ cd randomInputsPhysicsExams
 ```
 
 # Installing
-For building your pdf exam you must install the software required firstly. You will need:
+For building your random pdf exam you must install the software required firstly. You will need:
 1. The R compiler, which you can download it from the official [website](https://cran.r-project.org/mirrors.html).
 2. An R IDE like RStudio, which you can download it from the official [website](https://www.rstudio.com/products/rstudio/download/).
-3. A Latex compiler like MiKTeX, recommended for Windows users, which you can download it from [here](https://miktex.org/download) or LiveTex, recommended for Linux users, which you can download it from [here](https://tug.org/texlive/acquire-netinstall.html).
+3. A Latex compiler like MiKTeX, recommended for Windows users, which you can download it from [here](https://miktex.org/download), or LiveTex, recommended for Linux users, which you can download it from [here](https://tug.org/texlive/acquire-netinstall.html).
 
 # Compiling
 Once you have all installed, open the Rnw file from Rstudio and finally compile the pdf.
