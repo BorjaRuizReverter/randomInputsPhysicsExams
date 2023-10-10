@@ -31,4 +31,4 @@ Once you have all installed, open the Rnw file from Rstudio and finally compile 
 # Example
 This below is an exam example. Note that all numbers are randomly generated and every solution matches those random inputs.
 
-<img src="/assets/Prova_finalA_pag1.pdf"/>
+<img src="/assets/Prova_finalA_pag1.png"/>
